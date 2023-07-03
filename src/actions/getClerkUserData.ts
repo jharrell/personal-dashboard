@@ -2,6 +2,7 @@ import { currentUser } from "@clerk/nextjs";
 import {redirect} from 'next/navigation'
 import prisma from "@/lib/prisma";
 import { User } from "@prisma/client";
+import {} from 'next/navigation'
 
 
 export async function getUserData() {

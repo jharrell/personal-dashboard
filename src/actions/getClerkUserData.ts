@@ -9,20 +9,20 @@ export async function getUserData() {
     }
 
     if (user) {
-        const userData = await prisma.user.findUnique({
-            where: {
-                clerkId: user.id,
-            },
+        // const userData = await prisma.user.findUnique({
+        //     where: {
+        //         clerkId: user.id,
+        //     },
             
-        });
+        // });
+        console.log(user)
+        // if (!userData) {
+        //     redirect('/user-profile')
+        // }
 
-        if (!userData) {
-            redirect('/user-profile')
-        }
-
-        if(userData) {
-            redirect('/');
-        }
+        // if(userData) {
+        //     redirect('/');
+        // }
     }
 
     

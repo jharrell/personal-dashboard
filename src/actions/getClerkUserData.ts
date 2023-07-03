@@ -1,6 +1,7 @@
 import { currentUser } from "@clerk/nextjs";
 import {redirect} from 'next/navigation'
 import prisma from "@/lib/prisma";
+import { User } from "@prisma/client";
 
 
 export async function getUserData() {
@@ -28,7 +29,7 @@ export async function getUserData() {
                         createdAt: new Date(),
                         updatedAt: new Date(),
                     }
-                }); 
+                }) as User;
                 
                 return newUser;
             }

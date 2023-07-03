@@ -9,7 +9,6 @@ export async function getUserData() {
     if(!user) {
         redirect('/sign-in')
     }
-    debugger;
     if (user) {
         try {
             const userData = await prisma.user.findUnique({
